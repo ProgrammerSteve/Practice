@@ -19,16 +19,27 @@ c.next=d;
 
 //time complexity: O(n)
 //Space complexity: O(1)
-const checkList=(head,val)=>{
+const checkList=(head,target)=>{
     let current=head;
-    let output=false;
     while(current!=null){
-        if(current.val==val){
-            output=true;
-            break;
+        if(current.val==target){
+            return true;
         }
         current=current.next;
     }
-    return output;
+    return false;
 }
-console.log(checkList(a,'G'));
+console.log(checkList(a,'C'));
+
+
+///////////////////////////////////
+
+
+//time complexity: O(n)
+//Space complexity: O(n)
+const checkRecursive=(head,target)=>{
+    if(head===null) return false;
+    if(head.val===target) return true;
+    return checkRecursive(head.next,target);
+}
+console.log(checkRecursive(a,'C'));

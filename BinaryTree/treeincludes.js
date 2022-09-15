@@ -17,7 +17,6 @@ b.left=d;
 b.right=e;
 c.right=f;
 
-
 //iterative solution
 const breadthFirstValueIncludes=(target,root)=>{
   if(root===null && val!==null)return false
@@ -34,16 +33,12 @@ const breadthFirstValueIncludes=(target,root)=>{
 const resp=breadthFirstValueIncludes('j',a)
 console.log(resp)
 
-
 //recursive answer
 const treeIncludes= (root,target) =>{
   if(root===null)return false;
   if(root.val===target)return true;
   return treeIncludes(root.left,target) || treeIncludes(root.right,target)
 }
-
-
-
 
 const depthFirstValueIncludes=(target,root)=>{
   if(root===null)return false
